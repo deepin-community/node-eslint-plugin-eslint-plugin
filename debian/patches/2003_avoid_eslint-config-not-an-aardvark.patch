@@ -1,0 +1,26 @@
+Description: Avoid use of node module eslint-config-not-an-aardvark
+Forwarded: no
+Author: Jonas Smedegaard <dr@jones.dk>
+Last-Update: 2020-03-25
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/.eslintrc.yml
++++ b/.eslintrc.yml
+@@ -1,7 +1,6 @@
+ plugins:
+   - node
+ extends:
+-  - not-an-aardvark/node
+   - plugin:node/recommended
+ root: true
+ rules:
+--- a/package.json
++++ b/package.json
+@@ -33,7 +33,6 @@
+     "chai": "^4.1.0",
+     "dirty-chai": "^2.0.1",
+     "eslint": "^7.0.0-alpha.3",
+-    "eslint-config-not-an-aardvark": "^2.1.0",
+     "eslint-plugin-node": "^11.1.0",
+     "eslint-scope": "^5.1.1",
+     "espree": "^6.2.1",

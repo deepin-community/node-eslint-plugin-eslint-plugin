@@ -1,0 +1,13 @@
+Description: Avoid privacy breaches reading the documentation
+Author: Jonas Smedegaard <dr@jones.dk>
+Last-Update: 2019-10-24
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/README.md
++++ b/README.md
+@@ -1,4 +1,4 @@
+-# eslint-plugin-eslint-plugin [![Build Status](https://travis-ci.org/not-an-aardvark/eslint-plugin-eslint-plugin.svg?branch=master)](https://travis-ci.org/not-an-aardvark/eslint-plugin-eslint-plugin)
++# eslint-plugin-eslint-plugin
+ 
+ An ESLint plugin for linting ESLint plugins
+ 

@@ -1,0 +1,6 @@
+020210413~8eccc37.patch
+2001_privacy.patch
+2002_avoid_eslint-plugin-self.patch
+2003_avoid_eslint-config-not-an-aardvark.patch
+2004_avoid_eslint-config-airbnb-base.patch
+2005_no-require-jsdoc.patch

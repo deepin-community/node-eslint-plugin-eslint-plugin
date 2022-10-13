@@ -1,0 +1,13 @@
+Description: have ESLint ignore missing JSDoc comments
+Forwarded: no
+Author: Jonas Smedegaard <dr@jones.dk>
+Last-Update: 2020-12-31
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/Xcomposer/.eslintrc.yml
++++ b/Xcomposer/.eslintrc.yml
+@@ -18,3 +18,4 @@
+   prefer-spread: off
+   no-restricted-syntax: off
+   prefer-destructuring: off
++  require-jsdoc: off

@@ -1,0 +1,3 @@
+  * extend testsuite when needed Nodejs modules are in Debian:
+    eslint-plugin-self
+    eslint-config-not-an-aardvark

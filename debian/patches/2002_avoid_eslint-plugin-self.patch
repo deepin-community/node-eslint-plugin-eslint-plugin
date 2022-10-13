@@ -1,0 +1,38 @@
+Description: Avoid use of node module eslint-plugin-self
+Forwarded: no
+Author: Jonas Smedegaard <dr@jones.dk>
+Last-Update: 2020-03-25
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/.eslintrc.yml
++++ b/.eslintrc.yml
+@@ -1,10 +1,8 @@
+ plugins:
+   - node
+-  - self
+ extends:
+   - not-an-aardvark/node
+   - plugin:node/recommended
+-  - plugin:self/all
+ root: true
+ rules:
+   comma-dangle:
+@@ -13,8 +11,3 @@
+       objects: always-multiline
+       functions: never # disallow trailing commas in function(es2017)
+   require-jsdoc: error
+-  self/meta-property-ordering: off
+-  self/require-meta-docs-url: off
+-  self/report-message-format:
+-    - error
+-    - '^[^a-z].*\.$'
+--- a/package.json
++++ b/package.json
+@@ -35,7 +35,6 @@
+     "eslint": "^7.0.0-alpha.3",
+     "eslint-config-not-an-aardvark": "^2.1.0",
+     "eslint-plugin-node": "^11.1.0",
+-    "eslint-plugin-self": "^1.0.1",
+     "eslint-scope": "^5.1.1",
+     "espree": "^6.2.1",
+     "estraverse": "^5.0.0",

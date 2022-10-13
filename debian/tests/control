@@ -1,0 +1,21 @@
+Test-Command: node -e "require('eslint-plugin-eslint-plugin');"
+Depends:
+ node-eslint-plugin-eslint-plugin,
+ nodejs,
+Restrictions: superficial
+
+Test-Command:
+ sed -i -e 's,../../lib/utils,/usr/share/nodejs/eslint-plugin-eslint-plugin/lib/utils,' tests/lib/utils.js
+ && sed -i -e 's,../../../lib/rules,/usr/share/nodejs/eslint-plugin-eslint-plugin/lib/rules,' tests/lib/rules/*.js
+ && mocha --reporter tap --recursive tests
+Depends:
+ eslint,
+ mocha,
+ node-chai,
+ node-eslint-plugin-eslint-plugin,
+ node-eslint-plugin-node,
+ node-escope,
+ node-espree,
+ node-estraverse,
+ node-js-yaml,
+ node-lodash,

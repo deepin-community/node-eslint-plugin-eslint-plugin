@@ -1,0 +1,14 @@
+Description: Avoid use of Node.js module eslint-config-airbnb-base
+Forwarded: no
+Author: Jonas Smedegaard <dr@jones.dk>
+Last-Update: 2020-12-31
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/Xcomposer/.eslintrc.yml
++++ b/Xcomposer/.eslintrc.yml
+@@ -1,5 +1,4 @@
+ extends:
+-  - airbnb-base
+   - plugin:node/recommended
+ 
+ parserOptions:

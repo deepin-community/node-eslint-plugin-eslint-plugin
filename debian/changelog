@@ -1,0 +1,105 @@
+node-eslint-plugin-eslint-plugin (2.3.0+~0.3.0-3) unstable; urgency=medium
+
+  * add patch cherry-picked upstream
+    to use eslint-scope (not escope);
+    see bug#987825
+  * unfuzz patches
+
+ -- Jonas Smedegaard <dr@jones.dk>  Fri, 30 Apr 2021 14:38:04 +0200
+
+node-eslint-plugin-eslint-plugin (2.3.0+~0.3.0-2) unstable; urgency=medium
+
+  * fix Xcomposer unit test
+
+ -- Jonas Smedegaard <dr@jones.dk>  Thu, 31 Dec 2020 07:20:32 +0100
+
+node-eslint-plugin-eslint-plugin (2.3.0+~0.3.0-1) unstable; urgency=medium
+
+  * embed and install Node.js module eslint-rule-composer;
+    provide virtual package node-eslint-rule-composer;
+    build-depend on jq
+  * add patch 2004
+    to avoid use of Node.js module eslint-config-airbnb-base
+  * add patch 2005
+    to have ESLint ignore missing JSDoc comments
+  * copyright: update coverage
+
+ -- Jonas Smedegaard <dr@jones.dk>  Thu, 31 Dec 2020 07:08:58 +0100
+
+node-eslint-plugin-eslint-plugin (2.3.0-2) unstable; urgency=medium
+
+  * stop depend on nodejs;
+    have autopkgtest depend on nodejs
+
+ -- Jonas Smedegaard <dr@jones.dk>  Sun, 27 Dec 2020 05:13:45 +0100
+
+node-eslint-plugin-eslint-plugin (2.3.0-1) unstable; urgency=medium
+
+  [ upstream ]
+  * new release(s)
+
+  [ Debian Janitor ]
+  * set upstream metadata fields:
+    Bug-Database Bug-Submit Repository Repository-Browse
+
+  [ Jonas Smedegaard ]
+  * declare compliance with Debian Policy 4.5.1
+  * update TODOs
+  * use debhelper compatibility level 13 (not 12)
+  * refresh patches
+
+ -- Jonas Smedegaard <dr@jones.dk>  Tue, 15 Dec 2020 15:40:03 +0100
+
+node-eslint-plugin-eslint-plugin (2.2.1-2) unstable; urgency=medium
+
+  * fix eslint commandline when DEB_BUILD_OPTIONS=terse
+  * watch: drop unused repacksuffix
+  * autopkgtest: fix depend on eslint node-eslint-plugin-node
+    node-escope node-espree node-estraverse node-js-yaml node-lodash
+
+ -- Jonas Smedegaard <dr@jones.dk>  Thu, 23 Apr 2020 01:22:38 +0200
+
+node-eslint-plugin-eslint-plugin (2.2.1-1) unstable; urgency=medium
+
+  [ upstream ]
+  * new release(s)
+
+  [ Jonas Smedegaard ]
+  * copyright: extend coverage
+  * unfuzz patches
+
+ -- Jonas Smedegaard <dr@jones.dk>  Fri, 27 Mar 2020 22:03:19 +0100
+
+node-eslint-plugin-eslint-plugin (1.2.0-4) unstable; urgency=medium
+
+  * add patches 2002-2003 to avoid use of node modules
+    eslint-plugin-self eslint-config-not-an-aardvark
+  * check with eslint as build test;
+    build-depend on eslint node-eslint-plugin-node
+  * use debhelper compatibility level 12 (not 10);
+    build-depend on debhelper-compat (not debhelper)
+
+ -- Jonas Smedegaard <dr@jones.dk>  Wed, 25 Mar 2020 18:44:54 +0100
+
+node-eslint-plugin-eslint-plugin (1.2.0-3) unstable; urgency=medium
+
+  * tighten autopkgtest: lodash keeps silent now
+    (see bug#935845)
+  * declare compliance with Debian Policy 4.5.0
+  * temporarily stop build-depend on eslint node-eslint-plugin-node
+
+ -- Jonas Smedegaard <dr@jones.dk>  Wed, 18 Mar 2020 15:14:58 +0100
+
+node-eslint-plugin-eslint-plugin (1.2.0-2) experimental; urgency=medium
+
+  * fix clean generated docs
+  * update TODOs
+
+ -- Jonas Smedegaard <dr@jones.dk>  Sat, 30 Nov 2019 10:50:13 +0100
+
+node-eslint-plugin-eslint-plugin (1.2.0-1) experimental; urgency=low
+
+  * Initial release.
+    Closes: Bug#943417.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Thu, 24 Oct 2019 19:47:09 +0200
