@@ -1,3 +1,22 @@
+node-eslint-plugin-eslint-plugin (2.3.0+~0.3.0-4) unstable; urgency=medium
+
+  * update git-buildpackage config:
+    + use DEP-14 branch names debian/latest upstream/latest
+      (not debian/master upstream)
+    + add usage comment
+  * fix lint-check only visible files;
+    closes: bug#1006065, thanks to Lucas Nussbaum
+  * generate documentation with cmark-gfm (not pandoc);
+    build-depend on cmark-gfm (not pandoc)
+  * declare compliance with Debian Policy 4.6.0
+  * update copyright info:
+    + use Reference field (not License-Reference);
+      tighten lintian overrides
+    + update coverage
+  * simplify source helper script copyright-check
+
+ -- Jonas Smedegaard <dr@jones.dk>  Fri, 25 Feb 2022 19:02:38 +0100
+
 node-eslint-plugin-eslint-plugin (2.3.0+~0.3.0-3) unstable; urgency=medium
 
   * add patch cherry-picked upstream
