@@ -5,6 +5,7 @@ Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.deb
 Uploaders:
  Jonas Smedegaard <dr@jones.dk>,
 Build-Depends:
+ cmark-gfm <!nodoc>,
  debhelper-compat (= 13),
  jq,
  mocha <!nocheck>,
@@ -16,8 +17,7 @@ Build-Depends:
  node-estraverse <!nocheck>,
  node-js-yaml <!nocheck>,
  node-lodash <!nocheck>,
- pandoc <!nodoc>,
-Standards-Version: 4.5.1
+Standards-Version: 4.6.0
 Homepage: https://github.com/not-an-aardvark/eslint-plugin-eslint-plugin
 Vcs-Browser: https://salsa.debian.org/js-team/node-eslint-plugin-eslint-plugin
 Vcs-Git: https://salsa.debian.org/js-team/node-eslint-plugin-eslint-plugin.git

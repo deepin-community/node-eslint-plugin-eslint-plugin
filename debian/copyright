@@ -5,22 +5,28 @@ Source: https://github.com/not-an-aardvark/eslint-plugin-eslint-plugin/releases
  https://github.com/not-an-aardvark/eslint-rule-composer/releases
 
 Files: *
-Copyright: 2016-2017, Teddy Katz <teddy.katz@gmail.com>
+Copyright:
+  2016-2017  Teddy Katz <teddy.katz@gmail.com>
 License: Expat
+Reference:
+ package.json
+ LICENSE
 
 Files:
  tests/lib/rules/require-meta-docs-url.js
 Copyright:
-  2016, Toru Nagashima <star.ctor@gmail.com>
+  2016  Toru Nagashima <star.ctor@gmail.com>
 License-Grant:
  See LICENSE file in root directory for full license.
 License: Expat
+Reference:
+ LICENSE
 
 Files:
  debian/*
 Copyright:
-  2016-2020, Jonas Smedegaard <dr@jones.dk>
-  2019-2020, Purism SPC
+  2019-2022  Jonas Smedegaard <dr@jones.dk>
+  2019-2022  Purism SPC
 License-Grant:
  This program is free software;
  you can redistribute it and/or modify it
@@ -28,6 +34,7 @@ License-Grant:
  as published by the Free Software Foundation;
  either version 3, or (at your option) any later version.
 License: GPL-3+
+Reference: debian/copyright
 
 License: Expat
  Permission is hereby granted, free of charge,
@@ -54,4 +61,4 @@ License: Expat
  OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 License: GPL-3+
-License-Reference: /usr/share/common-licenses/GPL-3
+Reference: /usr/share/common-licenses/GPL-3

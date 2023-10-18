@@ -1,5 +1,6 @@
 #!/usr/bin/make -f
 
+# resolve DEB_VERSION
 include /usr/share/dpkg/pkg-info.mk
 
 # generate documentation unless nodoc requested
@@ -19,15 +20,6 @@ ESLINT += --format unix
 MOCHA += --reporter dot --no-colors
 endif
 
-%:
-	dh $@
-
-%.html: %.md
-	pandoc --from gfm-raw_html --to html --standalone --output $@ $<
-
-%.txt: %.md
-	pandoc --from gfm-raw_html --to plain --output $@ $<
-
 override_dh_clean:
 	dh_clean -- $(DOCS) $(CHANGELOGS)
 
@@ -35,7 +27,7 @@ override_dh_auto_build: $(DOCS) $(CHANGELOGS)
 
 override_dh_auto_test:
 	$(ESLINT) Xcomposer
-	$(ESLINT) . --ignore-pattern '!.*'
+	$(ESLINT) . --ignore-pattern '.*'
 	$(MOCHA) --recursive Xcomposer/tests
 	$(MOCHA) --recursive tests
 
@@ -47,3 +39,12 @@ override_dh_installchangelogs:
 
 override_dh_gencontrol:
 	dh_gencontrol -- -V"composer:Version=$(shell jq --raw-output .version < Xcomposer/package.json)~$(DEB_VERSION)"
+
+%.html: %.md
+	cmark-gfm $< > $@
+
+%.txt: %.md
+	cmark-gfm --to plaintext $< > $@
+
+%:
+	dh $@
